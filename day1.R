@@ -41,3 +41,18 @@ IQR<-function(x){
 }
 calIQR<-format(round(IQR(s),1),nsmall=1)
 cat(calIQR,sep="\n")
+
+# SquareRoot
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+input<-file('stdin',open='r')
+data<-as.numeric(unlist(strsplit(readLines(input)[2]," ")))
+squareroot<-function(x){
+    m<-mean(x)
+    n<-length(x)
+    s<-sqrt(sum((x-m)^2)/n)
+    return(s)
+}
+sqr<-squareroot(data)
+cat(format(round(sqr,1),nsmall=1),sep="/n")
+
+
