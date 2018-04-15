@@ -17,3 +17,11 @@ cat(m1,sep="\n")
 cat(m2,sep="\n")
 cat(m3,sep="\n")
 
+# Day 0: Weighted Mean
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+y<-file('stdin',open='r')
+file<-readLines(y)
+x<-as.numeric(unlist(strsplit(file[[2]]," ")))
+w<-as.numeric(unlist(strsplit(file[[3]]," ")))
+cat(format(round(sum(x*w)/sum(w)),nsmall=1),sep="\n")
+
