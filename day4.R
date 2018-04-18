@@ -35,3 +35,17 @@ q1<-cumdistr(10,2,p)
 q2<-1-q1+binDistr(10,2,p)
 cat(round(q1,3),sep="\n")
 cat(round(q2,3),sep="\n")
+
+# Geometric Distribution I
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+geodis<-function(n,p){
+    result<-p*(1-p)^(n-1)
+    return(result)
+}
+distribution<-geodis(5,1/3)
+cat(round(distribution,3),sep="\n")
+
+# Geometric Distribution II
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+distribution<-1-(1-1/3)^5
+cat(round(distribution,3),sep="\n")
